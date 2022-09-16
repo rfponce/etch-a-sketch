@@ -50,3 +50,7 @@ h1,
   0px 3px 5px rgba(255, 255, 255, 0.4),
   0px -3px 5px rgba(0, 0, 0, 0.4);
 }
+
+nav {
+  margin: 2rem;
+}
