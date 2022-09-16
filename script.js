@@ -18,4 +18,8 @@ function fillCanvas(squaresPerSide=16) {
   for (let i = 0; i < totalNumberOfSquares; i++) {
     generateSquare(squareSize);
   }
+
+  for (let i = 0; i < squaresPerSide; i++) {
+    canvas.style.gridTemplateColumns = `${canvas.style.gridTemplateColumns} auto`;
+  }
 }
