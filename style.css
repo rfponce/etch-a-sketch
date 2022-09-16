@@ -63,3 +63,13 @@ label {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: aliceblue;
 }
+
+button {
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 
+  0px 3px 5px rgba(255, 255, 255, 0.4) inset,
+  0px -3px 5px rgba(0, 0, 0, 0.4) inset;
+  background-color: royalblue;
+  color: aliceblue;
+}
