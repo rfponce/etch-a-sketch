@@ -38,7 +38,18 @@ function askForSquares() {
     return alert("The number must be between 1 and 100");
   }
 
+  eraseCanvas();
   fillCanvas(squaresPerSide);
+}
+
+function eraseCanvas() {
+  const canvas = document.getElementById('canvas');
+
+  // Is not recommended to remove children from live elements like "canvas.childNodes" because the order changes in real time. So the best way to remove them is from a static element like an array
+  const canvasChildren = Array.from(canvas.childNodes);
+
+  canvasChildren.forEach(child => canvas.removeChild(child));
+  canvas.style.gridTemplateColumns = '';
 }
 
 squaresButton.addEventListener('click', askForSquares);
