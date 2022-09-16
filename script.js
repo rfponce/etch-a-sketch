@@ -40,7 +40,8 @@ function fillCanvas(squaresPerSide=16) {
 function askForSquares() {
   let squaresPerSide = prompt("Enter the desired number of squares per side. It must be a number between 1 and 100");
 
-  if (isNaN(squaresPerSide) === true) {
+  if (squaresPerSide === null) {return}
+  else if (isNaN(squaresPerSide) === true) {
     return alert("Only numbers are valid");
   }
   else if ((squaresPerSide < 1) || (squaresPerSide > 100)) {
