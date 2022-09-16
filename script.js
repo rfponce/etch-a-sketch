@@ -1,5 +1,5 @@
 // Create a div and show it to canvas
-function generateSquare(sizeInPx) {
+function generateSquare(sizeInPx=60) {
   const canvas = document.getElementById('canvas');
   let square = document.createElement('div');
 
