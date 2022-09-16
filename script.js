@@ -4,8 +4,8 @@ function generateSquare(sizeInPx) {
   let square = document.createElement('div');
 
   square.classList.add('canvasSquare');
-  square.style.width = sizeInPx;
-  square.style.height = sizeInPx;
+  square.style.width = `${sizeInPx}px`;
+  square.style.height = `${sizeInPx}px`;
   square.style.border = "1px solid black";
   canvas.appendChild(square);
 }
