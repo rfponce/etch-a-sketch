@@ -18,3 +18,15 @@ h1,
 #subheading {
   font-size: 4rem;
 }
+
+#frame {
+  width: 1024px;
+  height: 768px;
+  background-color: rgb(215, 35, 35);
+  text-align: center;
+  border-radius: 3%;
+  box-shadow: 
+  0px 5px 5px rgba(255, 255, 255, 0.4) inset,
+  0px -5px 5px rgba(0, 0, 0, 0.4) inset,
+  0 0 3px 4px rgba(0, 0, 0, 0.2)
+}
