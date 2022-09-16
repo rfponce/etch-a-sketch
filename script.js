@@ -1,3 +1,5 @@
+const squaresButton = document.getElementById('squares-per-side');
+
 // Create a div and show it to canvas
 function generateSquare(sizeInPx=60) {
   const canvas = document.getElementById('canvas');
@@ -25,3 +27,18 @@ function fillCanvas(squaresPerSide=16) {
     canvas.style.gridTemplateColumns = `${canvas.style.gridTemplateColumns} auto`;
   }
 }
+
+function askForSquares() {
+  let squaresPerSide = prompt("Enter the desired number of squares per side. It must be a number between 1 and 100");
+
+  if (isNaN(squaresPerSide) === true) {
+    return alert("Only numbers are valid");
+  }
+  else if ((squaresPerSide < 1) || (squaresPerSide > 100)) {
+    return alert("The number must be between 1 and 100");
+  }
+
+  fillCanvas(squaresPerSide);
+}
+
+squaresButton.addEventListener('click', askForSquares);
