@@ -10,7 +10,7 @@ function generateSquare(sizeInPx=60) {
   square.classList.add('canvasSquare');
   square.style.width = `${sizeInPx}px`;
   square.style.height = `${sizeInPx}px`;
-  square.style.border = "1px solid black";
+  // square.style.border = "1px solid black";
   square.addEventListener('mouseover', () => {
     if (colorOption.value === 'black'){
       square.style.backgroundColor = 'black';
