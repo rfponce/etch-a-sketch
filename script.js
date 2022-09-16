@@ -1,4 +1,5 @@
 const squaresButton = document.getElementById('squares-per-side');
+const eraseDrawingButton = document.getElementById('reset');
 
 // Create a div and show it to canvas
 function generateSquare(sizeInPx=60) {
@@ -60,7 +61,14 @@ function eraseCanvas() {
   canvas.style.gridTemplateColumns = '';
 }
 
+function resetSquaresColor() {
+  const squaresArray = document.querySelectorAll('.canvasSquare');
+
+  squaresArray.forEach(square => square.style.backgroundColor = 'gainsboro');
+}
+
 squaresButton.addEventListener('click', askForSquares);
+eraseDrawingButton.addEventListener('click', resetSquaresColor);
 document.addEventListener('DOMContentLoaded', () => {
   fillCanvas();
 });
