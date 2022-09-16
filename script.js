@@ -9,3 +9,13 @@ function generateSquare(sizeInPx) {
   square.style.border = "1px solid black";
   canvas.appendChild(square);
 }
+
+function fillCanvas(squaresPerSide=16) {
+  const canvas = document.getElementById('canvas');
+  let squareSize = Math.floor(canvas.offsetWidth / squaresPerSide);
+  let totalNumberOfSquares = squaresPerSide * squaresPerSide;
+  
+  for (let i = 0; i < totalNumberOfSquares; i++) {
+    generateSquare(squareSize);
+  }
+}
