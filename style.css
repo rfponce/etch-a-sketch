@@ -61,7 +61,8 @@ nav {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-label {
+label,
+#resolution-info {
   font-size: 1.6rem;
   color: aliceblue;
 }
