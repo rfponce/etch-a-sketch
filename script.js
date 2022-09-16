@@ -13,12 +13,14 @@ function generateSquare(sizeInPx=60) {
 function fillCanvas(squaresPerSide=16) {
   const canvas = document.getElementById('canvas');
   let squareSize = Math.floor(canvas.offsetWidth / squaresPerSide);
+  // Calculates the total number of squares that fit into canvas, and generate them
   let totalNumberOfSquares = squaresPerSide * squaresPerSide;
   
   for (let i = 0; i < totalNumberOfSquares; i++) {
     generateSquare(squareSize);
   }
 
+  // Fill the "grid template columns" CSS property with the same number of "auto"s as the columns needed
   for (let i = 0; i < squaresPerSide; i++) {
     canvas.style.gridTemplateColumns = `${canvas.style.gridTemplateColumns} auto`;
   }
