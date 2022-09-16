@@ -53,4 +53,7 @@ h1,
 
 nav {
   margin: 2rem;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
