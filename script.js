@@ -4,6 +4,7 @@ const eraseDrawingButton = document.getElementById('reset');
 // Create a div and show it to canvas
 function generateSquare(sizeInPx=60) {
   const canvas = document.getElementById('canvas');
+  const colorOption = document.getElementById('colors-list');
   let square = document.createElement('div');
 
   square.classList.add('canvasSquare');
@@ -11,7 +12,12 @@ function generateSquare(sizeInPx=60) {
   square.style.height = `${sizeInPx}px`;
   square.style.border = "1px solid black";
   square.addEventListener('mouseover', () => {
-    square.style.backgroundColor = 'black';
+    if (colorOption.value === 'black'){
+      square.style.backgroundColor = 'black';
+    }
+    else if (colorOption.value === 'unicorn-puke') {
+      square.style.backgroundColor = randomRGBColor();
+    }
   })
   canvas.appendChild(square);
 }
@@ -66,6 +72,15 @@ function resetSquaresColor() {
   const squaresArray = document.querySelectorAll('.canvasSquare');
 
   squaresArray.forEach(square => square.style.backgroundColor = 'gainsboro');
+}
+
+function randomRGBColor() {
+  let r = random0to255();
+  let g = random0to255();
+  let b = random0to255();
+
+  function random0to255() {return Math.floor(Math.random() * (255 - 0 + 1) + 0)};
+  return `rgb(${r},${g},${b})`;
 }
 
 squaresButton.addEventListener('click', askForSquares);
