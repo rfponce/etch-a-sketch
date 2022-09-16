@@ -58,3 +58,6 @@ function eraseCanvas() {
 }
 
 squaresButton.addEventListener('click', askForSquares);
+document.addEventListener('DOMContentLoaded', () => {
+  fillCanvas();
+});
