@@ -14,6 +14,8 @@ function generateSquare(sizeInPx=60) {
 
 function fillCanvas(squaresPerSide=16) {
   const canvas = document.getElementById('canvas');
+  const xResolutionInfo = document.getElementById('x-resolution');
+  const yResolutionInfo = document.getElementById('y-resolution');
   let squareSize = Math.floor(canvas.offsetWidth / squaresPerSide);
   // Calculates the total number of squares that fit into canvas, and generate them
   let totalNumberOfSquares = squaresPerSide * squaresPerSide;
@@ -26,6 +28,9 @@ function fillCanvas(squaresPerSide=16) {
   for (let i = 0; i < squaresPerSide; i++) {
     canvas.style.gridTemplateColumns = `${canvas.style.gridTemplateColumns} auto`;
   }
+
+  xResolutionInfo.innerHTML = squaresPerSide;
+  yResolutionInfo.innerHTML = squaresPerSide;
 }
 
 function askForSquares() {
