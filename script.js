@@ -52,12 +52,10 @@ function askForSquares() {
 
 function eraseCanvas() {
   const canvas = document.getElementById('canvas');
-  const squaresArray = document.querySelectorAll('canvasSquare');
 
   // Is not recommended to remove children from live elements like "canvas.childNodes" because the order changes in real time. So the best way to remove them is from a static element like an array
   const canvasChildren = Array.from(canvas.childNodes);
 
-  squaresArray.forEach(square => square.removeEventListener('mouseover'));
   canvasChildren.forEach(child => canvas.removeChild(child));
   canvas.style.gridTemplateColumns = '';
 }
