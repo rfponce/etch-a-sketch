@@ -38,3 +38,13 @@ h1,
   0px 5px 5px rgba(255, 255, 255, 0.4) inset,
   0px -5px 5px rgba(0, 0, 0, 0.4) inset;
 }
+
+#canvas {
+  width: 960px;
+  height: 550px;
+  background-color: gainsboro;
+  margin: auto;
+  box-shadow: 
+  0px 3px 5px rgba(255, 255, 255, 0.4),
+  0px -3px 5px rgba(0, 0, 0, 0.4);
+}
