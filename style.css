@@ -57,3 +57,9 @@ nav {
   justify-content: space-around;
   width: 100%;
 }
+
+label {
+  font-size: 1.6rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: aliceblue;
+}
