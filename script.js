@@ -71,7 +71,7 @@ function eraseCanvas() {
 function resetSquaresColor() {
   const squaresArray = document.querySelectorAll('.canvasSquare');
 
-  squaresArray.forEach(square => square.style.backgroundColor = 'gainsboro');
+  squaresArray.forEach(square => square.style.backgroundColor = 'rgb(165, 172, 179)');
 }
 
 function randomRGBColor() {
